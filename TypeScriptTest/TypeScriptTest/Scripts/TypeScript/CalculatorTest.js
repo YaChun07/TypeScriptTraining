@@ -1,5 +1,5 @@
 /// <reference path="../app/calculator.ts" />
-describe("SampleApp測試", function () {
+describe("[TS] Jasmine test", function () {
     var calculator;
     beforeEach(function () {
         calculator = new Calculator();
@@ -19,6 +19,14 @@ describe("SampleApp測試", function () {
     it("multiply", function () {
         var result = calculator.multiply(5, 5);
         expect(25).toEqual(result);
+    });
+    it("Calculate 5+5 and show on screen", function () {
+        var result = calculator.show(5, "add", 5);
+        expect("5+5").toBe(result);
+    });
+    it("Calculator 5+5 and not show 10 on screen", function () {
+        var result = calculator.show(5, "add", 5);
+        expect("10").not.toBe(result);
     });
 });
 //# sourceMappingURL=CalculatorTest.js.map
