@@ -1,0 +1,21 @@
+﻿{
+  "Framework": "jasmine",
+  "Compile": {
+    "Mode": "External",
+    "Extensions": [ ".ts" ],
+    "ExtensionsWithNoOutput": [ ".d.ts" ]
+  },
+  "References": [
+    {
+      "Include": "*/*.ts",
+      "Exclude": "*/*.d.ts"
+    }
+  ],
+  "Tests": [
+    {
+      "Path": "TypeScript",
+      "Include": "*.ts",
+      "Exclude": "*.d.ts"
+    }
+  ]
+}
